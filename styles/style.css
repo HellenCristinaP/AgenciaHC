@@ -1,0 +1,197 @@
+/*
+Criar um arquivo CSS externo chamado "estilos.css".
+
+Aplicar cores, fontes e espaçamentos coerentes com uma identidade visual moderna e profissional.
+
+Utilizar Flexbox para alinhar itens do menu de navegação e outras seções.
+
+Utilizar CSS Grid para estruturar a seção "Serviços" em um layout responsivo.
+
+Usar unidades relativas (%, vh, vw, rem, em, fr) para garantir flexibilidade no design.
+
+Criar um menu responsivo que se ajuste para telas menores (hambúrguer menu opcional).
+
+Garantir que imagens e textos sejam responsivos. */
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1em 1.5em;
+    color: #123517;
+}
+
+button {
+    background-color: #25b900;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #1fa000;
+    }
+}
+
+p {
+    font-size: 1rem;
+    margin: 0.5em 2.5rem;
+    color: #0c0c0c;
+}
+
+a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        color: #25b900 !important;
+        text-shadow: -0.5px 0 0 currentColor;
+    }
+}
+
+#Home {
+    background-color: #eaffeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vw 7vw;
+    color: #25b900;
+    border: 1px solid #b4ffae;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #0c0c0c;
+    }
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em;
+    background-color: #f8f8f8;
+
+    #logo {
+        background-image: url("../imgs/logoP.png");
+        width: 8vh;
+        height: 8vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #fechado {
+        background-image: url("../imgs/menu.svg");
+        width: 8vh;
+        height: 8vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        a {
+            display: none;
+        }
+    }
+}
+
+main {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 10rem;
+
+    a{
+        display: block;
+        margin: 0.5em 2.5em;
+    }
+}
+
+
+#paineis {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.painel {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1.5fr));
+    
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+}
+
+#feedbacks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1.5fr));
+    gap: 1rem;
+    margin: 2em 1.5em;
+}
+
+.clientes {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #0000004f, -2px -2px 10px #0000004f;
+    
+    p {
+        font-size: 1rem;
+        color: #1f1f1f;
+    }
+
+    .nome-cliente {
+        text-align: right;
+        font-size: 0.9rem;
+        color: #444444;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.5rem;
+    color: #666;
+}
+
+@media (min-width: 700px) {
+    
+    body nav {
+        background-image: none !important;
+        width: auto;
+        height: auto;
+        padding: 0 1rem !important;
+        
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1.2rem;
+        
+        a {
+            display: block !important;
+            text-wrap: nowrap;
+        }
+
+    }
+
+    header #logo {
+        background-image: none;
+    }
+
+    #paineis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 2rem;
+    }
+}
