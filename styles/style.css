@@ -60,6 +60,7 @@ a {
     padding: 10vw 7vw;
     color: #25b900;
     border: 1px solid #b4ffae;
+    text-align: center;
 
     h1 {
         font-size: 1.5rem;
@@ -79,6 +80,14 @@ header {
     align-items: center;
     padding: 0.8em;
     background-color: #f8f8f8;
+
+    #login-fechado {
+        display: none !important;
+    }
+
+    #login-aberto {
+        display: block !important;
+    }
 
     #logo {
         background-image: url("../imgs/logoP.png");

@@ -1,43 +1,47 @@
 //Definição das classes.
-class Cliente {
-    #saldo;
-    constructor(nome, email, telefone, saldo) {
+export class Cliente {
+    #senha;
+    constructor(nome, email, senha) {
         this.nome = nome;
         this.email = email;
-        this.telefone = telefone;
-        this.#saldo = saldo;
+        this.#senha = senha;
+    }
+
+    getSenha() {
+        return this.#senha;
+    }
+}
+
+export class Conta {
+    #saldo;
+    constructor(cliente) {
+        this.cliente = cliente;
+        this.#saldo = 0;
+    }
+    
+    getSaldo() {
+        return this.#saldo;
+    }
+    
+    depositar(valor) {
+        if(valor > 0 && valor > this.#saldo){
+            this.#saldo += valor;
+            return alert("Depósito realizado com sucesso!");;
+        } else {
+            return alert("Valor inválido para depósito.");
+        }
+    }
+    
+    sacar(valor) {
+        if(valor > 0 && valor <= this.#saldo){
+            this.#saldo -= valor;
+            return alert("Saque realizado com sucesso!");;
+        } else {
+            return alert("Saldo insuficiente para saque.");
+        }
     }
 
     getSaldo() {
         return this.#saldo;
     }
-
-    depositar(valor, pessoa) {
-        if(valor > 0 && valor > this.#saldo){
-            this.#saldo += valor;
-            return `Depósito realizado para ${pessoa} com sucesso!`;
-        } else {
-            return "Valor inválido para depósito.";
-        }
-    }
-
-    sacar(valor) {
-        if(valor > 0 && valor <= this.#saldo){
-            this.#saldo -= valor;
-            return "Saque realizado com sucesso!";
-        } else {
-            return "Saldo insuficiente para saque.";
-        }
-    }
-}
-
-class Conta {
-    constructor(cliente) {
-        this.cliente = cliente;
-    }
-
-    verificarSaldo() {
-        return this.cliente.getSaldo();
-    }
-
 }
