@@ -1,8 +1,16 @@
 //Funções auxiliares.
 const form = document.querySelector("form");
-const login = document.querySelector("a[href='/pages/conta.html']");
 const spanClose = document.querySelector("form span");
 const button = document.getElementById("abrirFormB");
+
+// Arrow function reutilizável para atualizar o id do elemento de login
+const updateLoginId = (newId) => {
+  const loginElement = document.querySelector("a[href='/pages/index.html']");
+  if (loginElement) {
+    loginElement.removeAttribute("id");
+    if (newId) loginElement.setAttribute("id", newId);
+  }
+};
 
 spanClose.addEventListener("click", function () {
   form.classList.add("form-closed");
@@ -30,8 +38,9 @@ form.addEventListener("submit", function (event) {
   if (button) {
     button.classList.add("form-closed");
   }
-  login.removeAttribute("id");
-  login.setAttribute("id", "login-aberto");
+  
+  // Atualiza o id do link de login usando a função reutilizável
+  updateLoginId("login-aberto");
 
   localStorage.setItem("formSubmitted", "true");
   localStorage.setItem("nomeUsuario", form.elements["firtsName"].value);
@@ -40,5 +49,4 @@ form.addEventListener("submit", function (event) {
   localStorage.setItem("passwordUsuario", form.elements["password"].value);
 });
 
-
-export { abrirForm, login };
+export { abrirForm, updateLoginId };
