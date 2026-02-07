@@ -10,7 +10,7 @@ const nav = document.querySelector("nav");
 
 const htmlFinal = menu.map(nome => {
   return nome === "Login" 
-    ? `<a href="/pages/index.html" id="login-fechado">${nome}</a>` 
+    ? `<a href="pages/login.html" id="login-fechado">${nome}</a>` 
     : `<a href="#${nome}">${nome}</a>`;
 }).join(""); // Aqui o .join faz sentido, pois o .map retornou um Array
 
