@@ -10,20 +10,20 @@ const nav = document.querySelector("nav");
 
 const htmlFinal = menu.map(nome => {
   return nome === "Login" 
-    ? `<a href="pages/login.html" id="login-fechado">${nome}</a>` 
-    : `<a href="#${nome}">${nome}</a>`;
+  ? `<a href="pages/login.html" class="menu__item" id="login-closed">${nome}</a>` 
+  : `<a href="#${nome}" class="menu__item">${nome}</a>`;
 }).join(""); // Aqui o .join faz sentido, pois o .map retornou um Array
 
 nav.innerHTML = htmlFinal;
 
 
 nav.addEventListener("click", function (event) {
-  if (nav.classList.contains("fechado")) {
-    nav.classList.remove("fechado");
-    nav.classList.add("aberto");
+  if (nav.classList.contains("menu--closed")) {
+    nav.classList.remove("menu--closed");
+    nav.classList.add("menu--open");
   } else {
-    nav.classList.toggle("fechado");
-    nav.classList.remove("aberto")
+    nav.classList.toggle("menu--closed");
+    nav.classList.remove("menu--open")
   }
 });
 
@@ -32,10 +32,10 @@ button.addEventListener("click", abrirForm);
 document.addEventListener("DOMContentLoaded", function () {
   
   if (localStorage.getItem("formSubmitted") === "true") {
-    button.classList.add("form-closed");
-    updateLoginId("login-aberto");
+    button.classList.add("section__form--closed");
+    updateLoginId("menu__item__login--closed");
   } else {
-    updateLoginId("login-fechado");
-    button.classList.remove("form-closed");
+    updateLoginId("menu__item__login--closed");
+    button.classList.remove("section__form--closed");
   }
 });

@@ -5,7 +5,8 @@ const button = document.getElementById("abrirFormB");
 
 // Arrow function reutilizável para atualizar o id do elemento de login
 const updateLoginId = (newId) => {
-  const loginElement = document.querySelector("a[href='/pages/index.html']");
+  // Seleciona o link de login procurando pelo arquivo de destino (login.html)
+  const loginElement = document.querySelector("a[href$='login.html']");
   if (loginElement) {
     loginElement.removeAttribute("id");
     if (newId) loginElement.setAttribute("id", newId);
@@ -13,21 +14,21 @@ const updateLoginId = (newId) => {
 };
 
 spanClose.addEventListener("click", function () {
-  form.classList.add("form-closed");
-  form.classList.remove("form-open");
+  form.classList.add("section__form--closed");
+  form.classList.remove("section__form--open");
   document.body.classList.remove("bodyGray");
 });
 
 function abrirForm() {
-  form.classList.remove("form-closed");
-  form.classList.add("form-open");
+  form.classList.remove("section__form--closed");
+  form.classList.add("section__form--open");
   document.body.classList.add("bodyGray");
 }
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  form.classList.add("form-closed");
-  form.classList.remove("form-open");
+  form.classList.add("section__form--closed");
+  form.classList.remove("section__form--open");
   document.body.classList.remove("bodyGray");
 
   if (form.elements["firtsName"].value === "" || form.elements["email"].value === "" || !form.elements["email"].value.includes("@") || form.elements["lastName"].value === "" || form.elements["password"].value === "") {
@@ -36,11 +37,11 @@ form.addEventListener("submit", function (event) {
   }
 
   if (button) {
-    button.classList.add("form-closed");
+    button.classList.add("section__form--closed");
   }
   
   // Atualiza o id do link de login usando a função reutilizável
-  updateLoginId("login-aberto");
+  updateLoginId("menu__item__login--closed");
 
   localStorage.setItem("formSubmitted", "true");
   localStorage.setItem("nomeUsuario", form.elements["firtsName"].value);

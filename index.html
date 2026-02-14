@@ -14,9 +14,10 @@
 </head>
 
 <body>
-    <section>
-        <form action="#" class="form-closed">
-            <span>X</span>
+    <section class="section">
+        <form action="#" class="section__form section__form--closed">
+            <span class="section__close">X</span>
+
             <label for="firtsName">Nome:</label>
             <input type="text" id="firtsName" name="firtsName" >
             <label for="lastName">Sobrenome:</label>
@@ -28,24 +29,21 @@
             <button type="submit">Criar conta</button>
         </form>
     </section>
-    <header>
-        <div id="logo">
+    <header class="header">
+        <div class="header__logo">
 
         </div>
-        <div class="fechado">
-            <button id="menu" aria-label="Abrir menu"></button>
-            <nav>
-        </div>
-            <!-- <a href="/pages/index.html">Login</a> -->
+        <nav class="menu menu--closed">
+            <a href="/pages/index.html" class="menu__item menu__item--closed">Login</a>
         </nav>
     </header>
-    <main>
-        <section id="Home">
+    <main class="main">
+        <section class="main__home">
             <h1>Bem-vindo à Agencia HC</h1>
             <p>Um lugar onde suas ideias são investidas</p>
             <button id="abrirFormB">Abra sua conta gratuita!</button>
         </section>
-        <section id="Sobre">
+        <section id="main__sobre">
             <h2>Sobre nós</h2>
             <p>Sempre inovando com estudos de mercado e tecnologia. <br>
                 Atuando há mais de 10 anos no mercado financeiro, a Agencia HC é referência em soluções digitais para
@@ -55,38 +53,38 @@
                 Venha fazer parte dessa jornada de sucesso conosco!
             </p>
         </section>
-        <section id="Serviços">
+        <section id="main__servicos">
             <h2>Nossos Serviços</h2>
             <p>Trabalhamos muito com controles financeiros, veja alguns painéis abaixo:</p>
-            <section id="paineis">
-                <div class="painel">
+            <section id="main__paineis">
+                <div class="main__painel">
                     <img src="./imgs/download.jpeg" alt="">
                 </div>
-                <div class="painel">
+                <div class="main__painel">
                     <img src="./imgs/downloadOne.jpeg" alt="">
                 </div>
             </section>
         </section>
-        <section id="Depoimentos">
+        <section id="main__depoimentos">
             <h2>O que nossos clientes dizem</h2>
-            <section id="feedbacks">
-                <article class="clientes">
+            <section id="main__feedbacks">
+                <article class="main__clientes">
                     <p>"A Agencia HC transformou minha experiência de investimento. Com uma plataforma intuitiva e
                         suporte excepcional, me sinto confiante em cada decisão financeira que tomo."</p>
                     <p class="nome-cliente">- Maria S.</p>
                 </article>
-                <article class="clientes">
+                <article class="main__clientes">
                     <p>"Desde que comecei a usar os serviços da Agencia HC, meus investimentos cresceram
                         significativamente.
                         A equipe é altamente profissional e sempre pronta para ajudar."</p>
                     <p class="nome-cliente">- João P.</p>
                 </article>
-                <article class="clientes">
+                <article class="main__clientes">
                     <p>"A tecnologia oferecida pela Agencia HC é de ponta. A plataforma é fácil de usar e as ferramentas
                         analíticas me ajudaram a tomar decisões informadas."</p>
                     <p class="nome-cliente">- Ana L.</p>
                 </article>
-                <article class="clientes">
+                <article class="main__clientes">
                     <p>"O atendimento ao cliente da Agencia HC é excepcional. Sempre que tenho dúvidas, a equipe
                         responde
                         rapidamente e com soluções eficazes."</p>
@@ -94,15 +92,15 @@
                 </article>
             </section>
         </section>
-        <section id="Contato">
+        <section id="main__contato">
             <h2>Contato</h2>
             <p>Entre em contato conosco para mais informações sobre nossos serviços e como podemos ajudar você alcançar seus objetivos financeiros.</p>
             <a href="tel:+551112345689">Ligue agora: (11) 1234-56789</a>
             <a href="mailto:agendiaHCfinanciamento@gmail.com">email: agendiaHCfinanciamento@gmail.com</a>
         </section>
     </main>
-    <footer>
-        <p>Agencia HC, feita pela desenvolvedora <a href="https://hellencristinap.github.io/Portifolio_Hellen/">Hellen
+    <footer class="footer">
+        <p class="footer__p">Agencia HC, feita pela desenvolvedora <a href="https://hellencristinap.github.io/Portifolio_Hellen/" class="footer__link">Hellen
                 Cristina</a></p>
     </footer>
 </body>

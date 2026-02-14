@@ -28,10 +28,10 @@ button {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+}
 
-    &:hover {
-        background-color: #1fa000;
-    }
+button:hover {
+    background-color: #1fa000;
 }
 
 p {
@@ -44,14 +44,14 @@ a {
     color: #333;
     font-weight: bold;
     text-decoration: none;
-
-    &:hover {
-        color: #25b900 !important;
-        text-shadow: -0.5px 0 0 currentColor;
-    }
 }
 
-#Home {
+a:hover {
+    color: #25b900 !important;
+    text-shadow: -0.5px 0 0 currentColor;
+}
+
+.main__home {
     background-color: #eaffeb;
     display: flex;
     flex-direction: column;
@@ -61,145 +61,153 @@ a {
     color: #25b900;
     border: 1px solid #b4ffae;
     text-align: center;
+}
 
-    h1 {
-        font-size: 1.5rem;
-    }
+.main__home h1 {
+    font-size: 1.5rem;
+}
 
-    p {
-        font-size: 1rem;
-        margin-top: 1rem;
-        color: #0c0c0c;
-    }
+.main__home p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #0c0c0c;
 }
 
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.8em;
     background-color: #f8f8f8;
+}
 
-    #login-fechado {
-        display: none !important;
-    }
+.header__logo {
+    background-image: url("../imgs/logoP.png");
+    width: 8vh;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
-    #logo {
-        background-image: url("../imgs/logoP.png");
-        width: 8vh;
-        height: 8vh;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+.menu--closed {
+    background-image: url("../imgs/menu.svg");
+    width: 8vh;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
-    .fechado {
-        background-image: url("../imgs/menu.svg");
-        width: 8vh;
-        height: 8vh;
-        background-size: contain;
-        background-repeat: no-repeat;
+.menu__item {
+    display: none;
+}
 
-        a {
-            display: none;
-        }
-    }
+/* Compatibilidade com classes antigas usadas pelo JS */
+.closed {
+    background-image: url("../imgs/menu.svg");
+    width: 8vh;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
-    .aberto {
-        background-color: #eaffeb;
-        position: fixed;
-        padding: 2em;
-        top: 4em;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 2.5em;
-        width: 100%;
-    
-        background-color: #c3fabf;
-    }
-    
-    .aberto::before {
-        content: url("");
-        background-image: url("../imgs/menuOpen.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: fixed;
-        right: 0.5em;
-        top: 0.5em;
-        width: 9vh;
-        height: 9vh;
-    }
+.closed a {
+    display: none;
+}
 
-    .aberto::after{
-        content: url("");
-        background-color: #eaffeb;
-        position: fixed;
-        right: 0.5em;
-        top: 0.5em;
-        width: 100%;
-        height: 10.5vh;
-        z-index: -1;
-    }
+.menu--open {
+    background-color: #eaffeb;
+    position: fixed;
+    padding: 2em;
+    top: 4em;
+    left: 0em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    width: 100%;
+    background-color: #c3fabf;
+}
+
+.menu--open::before {
+    content: url("");
+    background-image: url("../imgs/menuOpen.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 0.5em;
+    top: 0.5em;
+    width: 9vh;
+    height: 9vh;
+}
+
+.menu--open::after{
+    content: url("");
+    background-color: #eaffeb;
+    position: fixed;
+    right: 0em;
+    top: 0em;
+    width: 100%;
+    height: 12vh;
+    z-index: -1;
 }
 
 
-main {
+.main {
     display: grid;
     grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 10rem;
+}
 
-    a {
-        display: block;
-        margin: 0.5em 2.5em;
-    }
+.main a {
+    display: block;
+    margin: 0.5em 2.5em;
 }
 
 
-#paineis {
+#main__paineis {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 2rem;
 }
 
-.painel {
+.main__painel {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18em, 1.5fr));
-
-    img {
-        width: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-    }
 }
 
-#feedbacks {
+.main__painel img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#main__feedbacks {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18em, 1.5fr));
     gap: 1rem;
     margin: 2em 1.5em;
 }
 
-.clientes {
+.main__clientes {
     background-color: #fff;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 2px 2px 10px #0000004f, -2px -2px 10px #0000004f;
-
-    p {
-        font-size: 1rem;
-        color: #1f1f1f;
-    }
-
-    .nome-cliente {
-        text-align: right;
-        font-size: 0.9rem;
-        color: #444444;
-    }
 }
 
-footer {
+.main__clientes p {
+    font-size: 1rem;
+    color: #1f1f1f;
+}
+
+.nome-cliente {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+.footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.5rem;
@@ -208,7 +216,7 @@ footer {
 
 @media (min-width: 700px) {
 
-    body nav {
+    .menu {
         background-image: none !important;
         width: auto;
         height: auto;
@@ -219,19 +227,17 @@ footer {
         flex-direction: row;
         justify-content: flex-end;
         gap: 1.2rem;
-
-        a {
-            display: block !important;
-            text-wrap: nowrap;
-        }
-
     }
 
-    header #logo {
+    .menu__item {
+        display: block;
+    }
+
+    .header__logo {
         background-image: none;
     }
 
-    #paineis {
+    #main__paineis {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
