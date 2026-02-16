@@ -1,0 +1,29 @@
+@mixin image($url){
+    background-image: $url;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@mixin cubo(){
+    width: 7.5vh;
+    height: 7.5vh;
+}
+
+@mixin center(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font($size, $weight, $color){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin a(){
+    color: $green-light;
+    font-weight: bold;
+    text-decoration: none;
+}

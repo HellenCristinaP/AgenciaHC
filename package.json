@@ -1,0 +1,21 @@
+{
+  "name": "agenciacsspoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/style.scss styles/style.css",
+    "sass:watch": "sass --watch sass/style.scss styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HellenCristinaP/AgenciaHC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HellenCristinaP/AgenciaHC/issues"
+  },
+  "homepage": "https://github.com/HellenCristinaP/AgenciaHC#readme"
+}
