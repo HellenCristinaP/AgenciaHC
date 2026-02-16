@@ -1,3 +1,5 @@
+@import 'vars';
+
 body.bodyGray {
   position: relative;
 }
@@ -7,7 +9,7 @@ body.bodyGray::before {
   position: fixed;
   inset: 0;
   background-color: #00000073;
-  z-index: 1;
+  z-index: calc($z-index + 1);
 }
 
 .section__form--closed {
@@ -29,8 +31,7 @@ body.bodyGray::before {
     5px 5px 10px #0000001a,
     -5px -5px 10px #0000001a;
   gap: 10px;
-  margin-top: 20px;
-  z-index: 2;
+  z-index: calc($z-index + 2);
 }
 
 label {
@@ -48,6 +49,7 @@ label {
   background-color: #ffb1b1;
   padding: 0.2em 0.5em;
   width: fit-content;
+  border-radius: 5px;
 }
 
 input {
