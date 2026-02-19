@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/HellenCristinaP/AgenciaHC/issues"
   },
-  "homepage": "https://github.com/HellenCristinaP/AgenciaHC#readme"
+  "homepage": "https://github.com/HellenCristinaP/AgenciaHC#readme",
+  "devDependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }
