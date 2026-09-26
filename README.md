@@ -258,6 +258,10 @@ Esta branch concentra uma série de revisões técnicas, correções de bugs fun
 - **Novos Dashboards em Alta Resolução**: Inclusão de 4 dashboards financeiros em formato widescreen 16:9 com detalhes em verde esmeralda, integrados em cards com efeitos de sombra e transição (`shadow-sm`, `transition-hover`).
 - **Estilização da Área da Conta (`pages/login.html`)**: Criação de um cards(paineis) moderno com Bootstrap contendo exibição destacada de saldo, botões de ação e link de retorno para a página inicial.
 
+### 5. Bug para concertar
+
+- **Ao clicar em Conta**: Mesmo não tem login, ele abre normalmente, vai ser alterado posteriormente.
+
 ---
 
 ## 📜 Scripts Disponíveis
