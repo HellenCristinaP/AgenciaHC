@@ -24,24 +24,20 @@ export class Conta {
     }
     
     depositar(valor) {
-        if(valor > 0 && valor > this.#saldo){
+        if(!isNaN(valor) && valor > 0){
             this.#saldo += valor;
-            return alert("Depósito realizado com sucesso!");;
+            return alert("Depósito realizado com sucesso!");
         } else {
             return alert("Valor inválido para depósito.");
         }
     }
     
     sacar(valor) {
-        if(valor > 0 && valor <= this.#saldo){
+        if(!isNaN(valor) && valor > 0 && valor <= this.#saldo){
             this.#saldo -= valor;
-            return alert("Saque realizado com sucesso!");;
+            return alert("Saque realizado com sucesso!");
         } else {
             return alert("Saldo insuficiente para saque.");
         }
-    }
-
-    getSaldo() {
-        return this.#saldo;
     }
 }

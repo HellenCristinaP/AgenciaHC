@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agencia HC</title>
 
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/style.css">
 
     <link rel="shortcut icon" href="imgs/logo.ico" type="image/x-icon">
@@ -18,8 +16,8 @@
         <form action="#" class="section__form section__form--closed">
             <span class="section__close">X</span>
 
-            <label for="firtsName">Nome:</label>
-            <input type="text" id="firtsName" name="firtsName">
+            <label for="firstName">Nome:</label>
+            <input type="text" id="firstName" name="firstName">
             <label for="lastName">Sobrenome:</label>
             <input type="text" id="lastName" name="lastName">
             <label for="email">Email:</label>
@@ -34,16 +32,16 @@
 
         </div>
         <nav class="menu menu--closed">
-            <a href="/pages/index.html" class="menu__item menu__item--closed">Login</a>
+            
         </nav>
     </header>
     <main class="main">
-        <section class="main__home">
+        <section class="main__home" id="Home">
             <h1>Bem-vindo à Agencia HC</h1>
             <p>Um lugar onde suas ideias são investidas</p>
             <button id="abrirFormB">Abra sua conta gratuita!</button>
         </section>
-        <section id="main__sobre">
+        <section id="Sobre">
             <h2>Sobre nós</h2>
             <p>Sempre inovando com estudos de mercado e tecnologia. <br>
                 Atuando há mais de 10 anos no mercado financeiro, a Agencia HC é referência em soluções digitais para
@@ -53,20 +51,26 @@
                 Venha fazer parte dessa jornada de sucesso conosco!
             </p>
         </section>
-        <section class="main__servicos">
+        <section class="main__servicos" id="Serviços">
             <h2>Nossos Serviços</h2>
             <p>Trabalhamos muito com controles financeiros, veja alguns painéis abaixo:</p>
             <section class="main__paineis">
-                <div class="card" style="width: 20rem;">
-                    <img src="./imgs/download.jpeg" alt="Dashboard completo, onde tem vários tipos de gráficos e visualização de vários dados">
+                <div class="main__painel shadow-sm transition-hover" style="width: 20rem;">
+                    <img src="./imgs/dashboard-investimentos.jpg" class="main__painel-img-top"
+                        alt="Dashboard de Carteira de Investimentos e Ações">
                 </div>
-                <div class="card" style="width: 20rem;">
-                    <img src="./imgs/downloadOne.jpeg" alt="Darshboard simples, mais objetivo e especifico">
+                <div class="main__painel shadow-sm transition-hover" style="width: 20rem;">
+                    <img src="./imgs/dashboard-mercado.jpg" class="main__painel-img-top"
+                        alt="Dashboard de Análise Global de Mercado e Tendências">
                 </div>
-            
+                <div class="main__painel shadow-sm transition-hover" style="width: 20rem;">
+                    <img src="./imgs/dashboard-metas.jpg" class="main__painel-img-top"
+                        alt="Dashboard de Planejamento Patrimonial e Metas">
+                </div>
             </section>
         </section>
-        <section class="main__depoimentos">
+
+        <section class="main__depoimentos" id="Depoimentos">
             <h2>O que nossos clientes dizem</h2>
             <section class="main__feedbacks">
                 <article class="main__clientes shadow-sm transition-hover">
@@ -93,22 +97,22 @@
                 </article>
             </section>
         </section>
-        <section class="main__contato">
+        <section class="main__contato" id="Contato">
             <h2>Contato</h2>
             <p>Entre em contato conosco para mais informações sobre nossos serviços e como podemos ajudar você alcançar
                 seus objetivos financeiros.</p>
-
             <a href="tel:+551112345689">Ligue agora: (11) 1234-56789</a>
-
-            <a href="mailto:agendiaHCfinanciamento@gmail.com">Email: agendiaHCfinanciamento@gmail.com</a>
+            <br />
+            <a href="mailto:agenciaHCfinanciamento@gmail.com">Email: agenciaHCfinanciamento@gmail.com</a>
         </section>
+        <footer class="footer">
+            <p>Agencia HC, feita pela desenvolvedora <a href="https://hellencristinap.github.io/Portifolio_Hellen/"
+                    class="footer__link">Hellen
+                    Cristina</a></p>
+        </footer>
     </main>
-    <footer class="footer">
-        <p class="footer__p">Agencia HC, feita pela desenvolvedora <a
-                href="https://hellencristinap.github.io/Portifolio_Hellen/" class="footer__link">Hellen
-                Cristina</a></p>
-    </footer>
-    <script type="module" src="scripts/app.js"></script>
 </body>
+
+<script type="module" src="scripts/app.js"></script>
 
 </html>

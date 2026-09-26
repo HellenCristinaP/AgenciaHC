@@ -10,27 +10,33 @@ const account = new Conta(client);
 const depositarBtn = document.getElementById("depositar");
 const retirarBtn = document.getElementById("retirar");
 
+const saldoSpan = document.getElementById("saldo");
+
 depositarBtn.addEventListener("click", function () {
     const input = prompt("Digite o valor para depositar:");
+    if (input === null) return;
     const valor = valorN(input);
 
     account.depositar(valor);
 
-    // 4. Atualização da UI:
-    const saldoSpan = document.getElementById("saldo");
-    const saldoFormatado = atualizarSaldoFormatado(account);
-    saldoSpan.textContent = saldoFormatado;
+    if (saldoSpan) {
+        saldoSpan.textContent = atualizarSaldoFormatado(account);
+    }
 });
 
 retirarBtn.addEventListener("click", function () {
     const input = prompt("Digite o valor para retirar:");
+    if (input === null) return;
     const valor = valorN(input);
 
     account.sacar(valor);
 
-    const saldoSpan = document.getElementById("saldo");
-    const saldoFormatado = atualizarSaldoFormatado(account);
-    saldoSpan.textContent = saldoFormatado;
+    if (saldoSpan) {
+        saldoSpan.textContent = atualizarSaldoFormatado(account);
+    }
 });
 
 exibirNomeUsuario();
+if (saldoSpan) {
+    saldoSpan.textContent = atualizarSaldoFormatado(account);
+}
